@@ -4,3 +4,8 @@ function stackFunction(){
 
     return num * num2;
 }
+
+console.log(stackFunction());
+
+var answer = stackFunction();
+console.log(answer);
