@@ -1,11 +1,36 @@
 function stackFunction(){
-    let num = 2;
-    let num2= 3;
+    //count is the pointer
+    let count = 0;
+    let data = [];
 
-    return num * num2;
+    function push(item){
+        data[count] = item;
+        count++;
+    }
+
+    function peek(){
+        return data[count - 1];
+    }
+
+    function pop(){
+        if(count != 0)
+        {
+            const entry = data[count - 1];
+            delete data[count - 1];
+            count --;
+            return entry;
+        }
+        else{
+            return "Stack is empty";
+        }
+    }
+    return {push, peek, pop, data};
 }
 
-console.log(stackFunction());
+const stack = stackFunction();
 
-var answer = stackFunction();
-console.log(answer);
+stack.push(1);
+stack.push(2);
+stack.pop();
+console.log(stack);
+console.log(stack.peek());
