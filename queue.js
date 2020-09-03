@@ -9,15 +9,16 @@ function queueFunction(){
     }
 
     function peek(){
-        return data[count-1];
+        return data[beg];
     }
 
-    return {enqueue, peek};
+    return {enqueue, peek, data};
 }
 
 const queue = queueFunction();
 
 queue.enqueue(1);
 queue.enqueue(2);
+queue.enqueue(3);
 
-
+console.log(queue.peek());
