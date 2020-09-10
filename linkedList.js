@@ -1,4 +1,4 @@
-class listNode {
+class ListNode {
 
     constructor(data){
         this.data = data;
@@ -8,5 +8,5 @@ class listNode {
 
 }
 
-let node1 = new listNode(1);
+let node1 = new ListNode(1);
 console.log(node1);
